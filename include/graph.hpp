@@ -3,18 +3,18 @@
 #include <cassert>
 #include<vector>
 template <typename T>
-class graph
+class graph_t
 {
 private:
 	unsigned N;
   	bool** graph_;
 public:
-	graph()
+	graph_t()
 	{
 		N=0;
 		graph_=nullptr;
 	}
-	graph(unsigned numb)
+	graph_t(unsigned numb)
 	{
 		N=numb;
 		graph_=new bool  *[N];
@@ -51,7 +51,7 @@ private:
     		}
 	}
 public:
-	~graph()
+	~graph_t()
 	{
 		for(unsigned i=0;i<N;++i)
 			delete[]graph_[i];
