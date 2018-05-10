@@ -57,4 +57,9 @@ public:
 			delete[]graph[i];
 		delete[]graph;
 	}
+	print((std::ostream& ostream, std::vector<unsigned> result) {
+    		for (unsigned i : result) {
+      			ostream << i << ' ';
+    		}
+	}
 };
