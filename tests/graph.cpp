@@ -10,7 +10,7 @@ TEST_CASE("just a test")
      "1 1 1 0 1\n"
      "0 1 0 0 0\n"
    };
-graph graph1(5);
+graph_t graph1(5);
 std::istringstream stream(in);
 graph1.read(stream);
 std::vector<unsigned> result;
