@@ -4,26 +4,19 @@
 #include "graph.hpp"
 TEST_CASE("just a test")
 {
-  std::string in{"0 1 0 0 1\n"
-     "1 0 1 0 1\n"   
-     "1 1 0 0 1\n"
-     "1 1 1 0 1\n"
-     "0 1 0 0 0\n"
+  std::string in{
+     "0 1 0\n"
+      "0 0 1\n"
+      "0 0 0"
    };
-graph_t graph(5);
+graph_t graph(3);
 std::istringstream stream(in);
 graph.read(stream);
 std::vector<unsigned> result;
-std::vector<unsigned> result1;
 result = graph.dfs(1);
-result1 = graph.dfs(3);
 std::ostringstream output;
-std::ostringstream output1;
 graph.print(output, result);
-graph.print(output1, result1);
-std::string out = "2 5 1 3 5 1 2 5 1 2 3 5 2 ";
-std::string out1 = "1 2 5 1 2 3 5 2";
+std::string out = "1 2 3 ";
 REQUIRE( out == output.str() );
-REQUIRE( out1 == output1.str() );
 }
 
