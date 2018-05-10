@@ -50,3 +50,11 @@ private:
       			}
     		}
 	}
+public:
+	~graph()
+	{
+		for(unsigned i=0;i<N;++i)
+			delete[]graph[i];
+		delete[]graph;
+	}
+};
