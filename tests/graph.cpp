@@ -5,12 +5,12 @@
 TEST_CASE("just a test")
 {
   std::string in{
-     "0 1 0 0 \n"
+     		"0 1 0 0 \n"
 		"1 0 1 1 \n"
 		"0 0 0 0 \n"
 		"0 0 0 0 \n"
    };
-graph_t graph(3);
+graph_t graph(4);
 std::istringstream stream(in);
 graph.read(stream);
 std::vector<unsigned> result;
