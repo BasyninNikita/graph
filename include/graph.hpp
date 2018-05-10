@@ -33,7 +33,7 @@ public:
 	{
 		std::vector<unsigned> result,ch;
 		for(unsigned i=0;i<N;++i){ch.push_back(false);}
-		help(index,ch,result);
+		help(index,&ch,&result);
 		return result;
 	}
 private:
