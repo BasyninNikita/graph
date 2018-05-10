@@ -30,4 +30,23 @@ public:
       			}
     		}
   	}
-	
+	std::vector<unsigned>dfs(unsigned index)
+	{
+		std::vector<unsigned> result,ch;
+		for(unsigned i=0;i<N;++i){ch.push_back(false)}
+		help(index;ch;result)
+		return result;
+	}
+private:
+	void help(unsigned index,std::vector<unsigned> * ch,std::vector<unsigned> * result)
+	{
+		ch[index] = true;
+    		result.push_back(index + 1);
+    		for (unsigned i = 0; i < N; i++) {
+      			if (graph_[index][i]) {
+        			if (!(ch[i])) {
+          				help(i, ch, result);
+        			}
+      			}
+    		}
+	}
