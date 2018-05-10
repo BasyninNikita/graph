@@ -54,10 +54,10 @@ public:
 	~graph()
 	{
 		for(unsigned i=0;i<N;++i)
-			delete[]graph[i];
-		delete[]graph;
+			delete[]graph_[i];
+		delete[]graph_;
 	}
-	print((std::ostream& ostream, std::vector<unsigned> result) {
+	print(std::ostream& ostream, std::vector<unsigned> result) {
     		for (unsigned i : result) {
       			ostream << i << ' ';
     		}
