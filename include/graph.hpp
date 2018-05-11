@@ -18,10 +18,14 @@ public:
 		}
 	}
 	void read(std::istringstream& stream) {
+		unsigned k;
     		for (unsigned i = 0; i < N; i++) {
       			for (unsigned j = 0; j < N; j++) {
-        			stream >> graph_[i][j];
+        			stream >>k;
+				if((k!=0)&&(k!=1) throw std::invalid_arguments("Incorrect numeral");
+				graph_[i][j]=k;
       			}
+			if(graph_[i][i]!=0) throw std::invalid_arguments("diagonal element=1");	   
     		}
   	}
 	std::vector<unsigned>dfs(unsigned index)
