@@ -8,11 +8,6 @@ private:
 	unsigned N;
   	bool** graph_;
 public:
-	graph_t()
-	{
-		N=0;
-		graph_=nullptr;
-	}
 	graph_t(unsigned numb)
 	{
 		N=numb;
