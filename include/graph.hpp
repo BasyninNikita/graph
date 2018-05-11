@@ -21,8 +21,8 @@ public:
 		unsigned k;
     		for (unsigned i = 0; i < N; i++) {
       			for (unsigned j = 0; j < N; j++) {
-        			stream >>k;
-				if((k!=0)&&(k!=1) throw std::invalid_arguments("Incorrect numeral");
+        			if(stream >>k){
+				if((k!=0)&&(k!=1) throw std::invalid_arguments("Incorrect numeral");}
 				graph_[i][j]=k;
       			}
 			if(graph_[i][i]!=0) throw std::invalid_arguments("diagonal element=1");	   
@@ -37,10 +37,10 @@ public:
 	}
 	graph_t & operator=(graph_t const &) = delete;
 private:
-	void help(unsigned index,std::vector<unsigned> * ch,std::vector<unsigned> * result)
+	void help(unsigned index,std::vector<unsigned> & ch,std::vector<unsigned> & result)
 	{
-		(*ch)[index] = true;
-    		(*result).push_back(index + 1);
+		ch[index] = true;
+    		result.push_back(index + 1);
     		for (unsigned i = 0; i < N; i++) {
       			if (graph_[index][i]) {
         			if (!((*ch)[i])) {
