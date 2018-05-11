@@ -38,7 +38,7 @@ TEST_CASE("exept1")
 	{
 		a = true;
 	}
-REQUIRE(a==true)
+REQUIRE(a==true);
 }
 TEST_CASE("exept2")
 {
@@ -58,5 +58,5 @@ TEST_CASE("exept2")
 	{
 		a = true;
 	}
-REQUIRE(a==true)
+REQUIRE(a==true);
 }
