@@ -22,6 +22,7 @@ REQUIRE( out == output.str() );
 }
 TEST_CASE("exept1")
 {
+	bool a=false;
 	try{
 		std::string in{
      		"0 2 0 0 \n"
@@ -33,7 +34,6 @@ TEST_CASE("exept1")
 		std::istringstream stream(in);
 		graph.read(stream);
 	}
-	bool a=false;
 	catch (std::invalid_argument)
 	{
 		a = true;
@@ -42,6 +42,7 @@ REQUIRE(a==true)
 }
 TEST_CASE("exept2")
 {
+	bool a=false;
 	try{
 		std::string in{
      		"0 1 0 0 \n"
@@ -53,7 +54,6 @@ TEST_CASE("exept2")
 		std::istringstream stream(in);
 		graph.read(stream);
 	}
-	bool a=false;
 	catch (std::invalid_argument)
 	{
 		a = true;
