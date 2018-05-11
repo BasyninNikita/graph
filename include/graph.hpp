@@ -52,9 +52,10 @@ public:
 			delete[]graph_[i];
 		delete[]graph_;
 	}
-	void print(std::ostream& ostream, std::vector<unsigned> result) {
+	void print(std::ostream& ostream, std::vector<unsigned> result);
+};
+void graph_t::print(std::ostream& ostream, std::vector<unsigned> result) {
     		for (unsigned i : result) {
       			ostream << i << ' ';
     		}
 	}
-};
