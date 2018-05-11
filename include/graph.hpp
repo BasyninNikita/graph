@@ -31,6 +31,7 @@ public:
                     if ((k != 0) && (k != 1))
                         throw std::invalid_argument("Incorrect numeral");
                 }
+                else throw std::invalid_argument("Incorrect numeral");
                 graph_[i][j] = k;
             }
             if (graph_[i][i] != 0)
