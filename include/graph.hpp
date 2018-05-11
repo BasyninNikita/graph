@@ -31,6 +31,7 @@ public:
 		help(index,&ch,&result);
 		return result;
 	}
+	graph_t & operator=(graph_t const &) = delete;
 private:
 	void help(unsigned index,std::vector<unsigned> * ch,std::vector<unsigned> * result)
 	{
