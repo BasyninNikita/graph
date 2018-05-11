@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <cassert>
 #include<vector>
+#include<stdexept>
 class graph_t
 {
 private:
